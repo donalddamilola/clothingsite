@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAMISTORE</title>
+</head>
+<style>
+    *{
+        background-color: rgb(250, 183, 250);
+    }
+  .dami{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 10px;
+    font-size: 15px;
+    
+  }
+ @keyframes scroll{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+ }
+  .image{
+    display: flex;
+    gap: 50px;
+    width: 350px;
+    height: 50vh;
+    animation: scroll 10s linear;
+  }
+  .winter{
+    gap: 300px;
+    display: flex;
+    margin-top: 20px;
+    
+  }
+  .span{
+    color: red;
+  }
+  @media only screen and (max-width:840px){
+    .dami{
+        display: none;
+    }
+    .image{
+        display: grid;
+        place-items: center;
+         margin: auto;
+         margin-top: -10px;
+         height: vh;
+         width: 300px;
+    }
+    .winter{
+        width: 170px;
+        display: grid;
+        gap: 70px;
+        margin-top: -180px;
+    
+    }
+    *{
+        width: 150px;
+        
+    }
+  }
+
+</style>
+<body>
+  <div>
+    <ul class="dami">
+        <li><a href=""></a>MY STORE/</li>
+        <li><a href=""></a>FASHION ACCESSORIES/</li>
+        <li><a href=""></a>MEN ATTIRE/</li>
+        <li><a href=""></a>.LOG IN</li>
+        <li><a href=""></a>.ABOUT US</li>
+    </ul>
+  </div>
+  <div class="image">
+    <img src="./beautiful-1274063_640.jpg" alt="">
+    <img src="./girl-1335663_640.jpg" alt="">
+    <img src="./christmas-2971961_640.jpg" alt="">
+  </div>
+   <div class="winter">
+    
+    <span class="span">WinterJacket<button id="btn"></button></span>
+    <span class="span">SunShade<button id="btn2"></button></span>
+    <span class="span">WinterGloves<button id="btn3"></button></span>
+
+    </div>
+
+<script>
+    function DAMISTORE (WinterJacket,SunShade,WinterGloves){
+      return WinterJacket * SunShade / WinterGloves
+    }
+    let price = DAMISTORE(8000,20,10);
+    document.getElementById('btn').innerHTML
+    = price;
+
+    function DAMISTORE2 (WinterJacket,SunShade,WinterGloves){
+      return WinterJacket * SunShade / WinterGloves
+    }
+    let price2 = DAMISTORE2(2000,20,10);
+    document.getElementById('btn2').innerHTML
+    = price2;
+
+
+    function DAMISTORE3 (WinterJacket,SunShade,WinterGloves){
+      return WinterJacket * SunShade / WinterGloves
+    }
+    let price3 = DAMISTORE3(1000,20,10);
+    document.getElementById('btn3').innerHTML
+    = price3;
+
+  </script>
+</body>
+</html>
